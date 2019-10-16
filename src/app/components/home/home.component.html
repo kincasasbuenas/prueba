@@ -1,0 +1,21 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="paises">
+
+    <!--p *ngFor="let pais of paises; index as i;">
+        {{pais.name}}
+    </p-->
+
+</div>
+<div class="container">
+    <div class=row>
+        <div class="col-sm-3" *ngFor="let region of regiones;">
+            <h2>{{region}}</h2>
+            <ul class="list-unstyled">
+                <li *ngFor="let pais of getByRegion( region )">
+                    {{ pais.name }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
